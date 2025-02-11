@@ -2,3 +2,4 @@ streamlit
 seleniumbase
 pandas
 openpyxl
+webdriver-manager
