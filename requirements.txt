@@ -1,6 +1,6 @@
 streamlit
+undetected-chromedriver
+webdriver-manager
 seleniumbase
 pandas
 openpyxl
-webdriver-manager
-undetected-chromedriver
