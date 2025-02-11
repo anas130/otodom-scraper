@@ -2,13 +2,13 @@ import streamlit as st
 import datetime
 import pandas as pd
 import io
+import os
 import time
 from seleniumbase import Driver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
-from webdriver_manager.chrome import ChromeDriverManager
-chrome_driver_path = ChromeDriverManager().install()
 
+custom_driver_path = os.path.expanduser("~/.local/bin/chromedriver")
 
 st.title("🏡 Otodom Property Scraper")
 st.write("Scraping property listings from Otodom with SeleniumBase...")
@@ -22,8 +22,7 @@ if st.button("Start Scraping"):
     progress_bar = st.progress(0)
     log_messages = []  # Store logs to display in a scrollable window
     
-    driver = Driver(uc=True, headless2=True)
-    driver.service.service_path = chrome_driver_path
+    driver = Driver(uc=True, headless2=True,  browser="chrome")
     url_template = "https://www.otodom.pl/pl/wyniki/sprzedaz/inwestycja/mazowieckie/warszawa/warszawa/warszawa?ownerTypeSingleSelect=ALL&viewType=listing&limit=72&page={}"
     
     links = []
