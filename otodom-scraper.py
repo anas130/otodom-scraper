@@ -21,7 +21,7 @@ if st.button("Start Scraping"):
     progress_bar = st.progress(0)
     log_messages = []  # Store logs to display in a scrollable window
     
-    driver = Driver(uc=True, headless2=True)
+    driver = Driver(uc=True, headless2=True, driver_executable_path="/tmp/chromedriver")
     url_template = "https://www.otodom.pl/pl/wyniki/sprzedaz/inwestycja/mazowieckie/warszawa/warszawa/warszawa?ownerTypeSingleSelect=ALL&viewType=listing&limit=72&page={}"
     
     links = []
