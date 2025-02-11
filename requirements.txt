@@ -1,5 +1,5 @@
 streamlit
-seleniumbase
+seleniumbase --no-cache-dir
 pandas
 openpyxl
 webdriver-manager
