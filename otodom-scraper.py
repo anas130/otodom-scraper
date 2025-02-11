@@ -8,8 +8,7 @@ from seleniumbase import Driver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 
-custom_driver_path = os.path.expanduser("~/.local/bin/chromedriver")
-
+os.environ["SB_DOWNLOADS_FOLDER"] = "/tmp/seleniumbase"
 st.title("🏡 Otodom Property Scraper")
 st.write("Scraping property listings from Otodom with SeleniumBase...")
 
